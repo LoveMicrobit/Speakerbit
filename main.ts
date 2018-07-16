@@ -1,18 +1,27 @@
 /*
  speakerbit package
 */
- //% weight=10 icon="\uf013" color=#2896ff
+ //% weight=10 icon="\uf013" color=#006000
 namespace speakerbit {
 
-    enum SpeakerSerialPin {
+    export enum SpeakerSerialPin {
+        //% block="P0"
         P0 = MICROBIT_ID_IO_P0,
+        //% block="P1"
         P1 = MICROBIT_ID_IO_P1,
+        //% block="P2"
         P2 = MICROBIT_ID_IO_P2,
+        //% block="P8"
         P8 = MICROBIT_ID_IO_P8,
+        //% block="P12"
         P12 = MICROBIT_ID_IO_P12,
+        //% block="P13"
         P13 = MICROBIT_ID_IO_P13,
+        //% block="P14"
         P14 = MICROBIT_ID_IO_P14,
+        //% block="P15"
         P15 = MICROBIT_ID_IO_P15,
+        //% block="P16"
         P16 = MICROBIT_ID_IO_P16
     };
 /**
@@ -28,7 +37,7 @@ namespace speakerbit {
  //% rx.fieldEditor="gridpicker" rx.fieldOptions.columns=3
  //% rx.fieldOptions.tooltips="false"
  //% blockGap=8
-  export function SpeakerbitInit(SpeakerSerialPin tx, SpeakerSerialPin rx) {
+  export function SpeakerbitInit(tx:SpeakerSerialPin, rx:SpeakerSerialPin) {
   serial.redirect(
      tx,
      rx,
