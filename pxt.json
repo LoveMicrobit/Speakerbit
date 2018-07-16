@@ -1,0 +1,19 @@
+{
+    "name": "speakerbit",
+    "version": "0.0.1",
+    "description": "Blocks for speakerbit",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "_locales/zh/speakerbit-strings.json",
+        "_locales/zh/speakerbit-jsdoc-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}

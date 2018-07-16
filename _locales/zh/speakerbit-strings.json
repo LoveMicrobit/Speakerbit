@@ -1,0 +1,13 @@
+{
+    "speakerbit.SpeakerbitInit|block":"Speakerbit配置串口|TX %tx|RX %rx|",
+    "speakerbit.PlayMusic|block":"播放音乐",
+    "speakerbit.Pause|block":"暂停音乐",
+    "speakerbit.Stop|block":"停止音乐",
+    "speakerbit.PlayPrevious|block":"播放上一首",
+    "speakerbit.PlayNext|block":"播放下一首",
+    "speakerbit.PlaySelect|block":"播放指定音乐编号%index",
+    "speakerbit.ReadName|block":"获取音乐名列表",
+    "speakerbit.SetVolume|block":"设置音量%index",
+    "speakerbit.VolumeUp|block":"音量+",
+    "speakerbit.VolumeDown|block":"音量-"
+}
