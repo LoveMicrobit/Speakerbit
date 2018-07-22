@@ -3,31 +3,10 @@
 */
  //% weight=100 icon="\ue952" color=#006000
 namespace speakerbit {
-
-    export enum SpeakerSerialPin {
-        //% block="P0"
-        P0 = EventBusSource.MICROBIT_ID_IO_P0,
-        //% block="P1"
-        P1 = EventBusSource.MICROBIT_ID_IO_P1,
-        //% block="P2"
-        P2 = EventBusSource.MICROBIT_ID_IO_P2,
-        //% block="P8"
-        P8 = EventBusSource.MICROBIT_ID_IO_P8,
-        //% block="P12"
-        P12 = EventBusSource.MICROBIT_ID_IO_P12,
-        //% block="P13"
-        P13 = EventBusSource.MICROBIT_ID_IO_P13,
-        //% block="P14"
-        P14 = EventBusSource.MICROBIT_ID_IO_P14,
-        //% block="P15"
-        P15 = EventBusSource.MICROBIT_ID_IO_P15,
-        //% block="P16"
-        P16 = EventBusSource.MICROBIT_ID_IO_P16
-    };
 /**
    * Speakerbit board initialization,set microbit serialpin, please execute at start time
-   * @param tx the new transmission pin, eg: SpeakerSerialPin.P0
-   * @param rx the new reception pin, eg: SpeakerSerialPin.P1
+   * @param tx the new transmission pin, eg: SerialPin.P0
+   * @param rx the new reception pin, eg: SerialPin.P1
   */
  //% weight=98
  //% blockId=SpeakerbitInit block="Speakerbit serial|TX %tx|RX %rx|"
@@ -37,11 +16,8 @@ namespace speakerbit {
  //% rx.fieldEditor="gridpicker" rx.fieldOptions.columns=3
  //% rx.fieldOptions.tooltips="false"
  //% blockGap=8
-  export function SpeakerbitInit(tx:SpeakerSerialPin, rx:SpeakerSerialPin) {
-  serial.redirect(
-     tx,
-     rx,
-     BaudRate.BaudRate9600);
+  export function SpeakerbitInit(tx:SerialPin, rx:SerialPin) {
+    serial.redirect(tx,rx,BaudRate.BaudRate9600);
     control.waitMicros(50);
 
     basic.forever(() => {
