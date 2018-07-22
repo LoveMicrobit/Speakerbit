@@ -1,7 +1,7 @@
 /*
  speakerbit package
 */
- //% weight=10 icon="\uf013" color=#006000
+ //% weight=100 icon="\ue952" color=#006000
 namespace speakerbit {
 
     export enum SpeakerSerialPin {
@@ -29,7 +29,7 @@ namespace speakerbit {
    * @param tx the new transmission pin, eg: SerialPin.P0
    * @param rx the new reception pin, eg: SerialPin.P1
   */
- //% weight=100
+ //% weight=98
  //% blockId=SpeakerbitInit block="Speakerbit serial|TX %tx|RX %rx|"
  //% blockExternalInputs=1
  //% tx.fieldEditor="gridpicker" tx.fieldOptions.columns=3
@@ -52,7 +52,7 @@ namespace speakerbit {
     /**
      * Control the Speakerbit play current music,default is the first music
      */
-    //% weight=98
+    //% weight=96
     //% blockId=PlayMusic block="Play music"
     export function PlayMusic()
     {
@@ -62,7 +62,7 @@ namespace speakerbit {
     /**
      * Pause the current playing music
      */
-    //% weight=96
+    //% weight=95
     //% blockId=Pause block="Pause music"
     export function Pause()
     {

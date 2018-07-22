@@ -1,3 +1,14 @@
 {
-	"speakerbit.handlebitInit":"Speakerbit设定好串口引脚并初始化",
+	"speakerbit.SpeakerbitInit":"Speakerbit初始化设置串口",
+	"speakerbit.PlayMusic":"播放音乐指令",
+	"speakerbit.Pause":"暂停音乐",
+	"speakerbit.Stop":"停止音乐",
+	"speakerbit.PlayPrevious":"播放上一曲",
+	"speakerbit.PlayNext":"播放下一曲",
+	"speakerbit.PlaySelect":"播放指定编号曲目",
+	"speakerbit.ReadName":"读取文件名",
+	"speakerbit.SetVolume":"设置音量，范围0到10",
+	"speakerbit.VolumeUp":"音量加",
+	"speakerbit.VolumeDown":"音量减"
+
 }
