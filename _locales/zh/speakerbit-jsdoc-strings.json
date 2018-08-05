@@ -9,6 +9,9 @@
 	"speakerbit.ReadName":"读取文件名",
 	"speakerbit.SetVolume":"设置音量，范围0到10",
 	"speakerbit.VolumeUp":"音量加",
-	"speakerbit.VolumeDown":"音量减"
+	"speakerbit.VolumeDown":"音量减",
+	"speakerbit.PlayInsert":"当你在播放一首音乐时，需要插入播放另一首短的声音，播放完成后回到之前的音乐，便可以使用此功能",
+    "speakerbit.getTotalNum":"获取音乐数目总量",
+    "speakerbit.setPlayMode":"设置音乐播放模式，共有3种播放模式"
 
 }

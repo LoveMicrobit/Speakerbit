@@ -1,8 +1,9 @@
 /*
  speakerbit package
 */
- //% weight=100 icon="\ue952" color=#006000
+ //% weight=100 icon="\uf001" color=#006000
 namespace speakerbit {
+    let total: number = 0;
 /**
    * Speakerbit board initialization,set microbit serialpin, please execute at start time
    * @param tx the new transmission pin, eg: SerialPin.P0
@@ -89,6 +90,19 @@ namespace speakerbit {
     }
 
     /**
+     * When you play music, you want to plug in other music, and when you're done, reback to the previous music
+     */
+    //% weight=87
+    //% blockId=PlayInsert block="Plug music %index"
+    export function PlayInsert(index: number)
+    {
+        let str: string = "|INS";
+        str += index.toString();
+        str += "$";
+        serial.writeString(str);
+    }
+
+    /**
      * Read the speakerbit all musics'name
      */
     //% weight=86
@@ -131,6 +145,47 @@ namespace speakerbit {
     {
         serial.writeString("|VOL-$");
     }
+
+    export enum PlayMode{
+        //% block="single stop"
+        SINGLE_STOP,
+        //% block="single loop"
+        SINGLE_LOOP,
+        //% block="play all"
+        ALL_PLAY
+    };
+
+    /**
+     * Get the total music num
+     */
+    //% weight=78
+    //% blockId=getTotalNum block="Get the total music num"
+    export function getTotalNum(): number
+    {
+        return total;
+    }
+
+    /**
+     * Set the play mode,default is single stop
+     */
+    //% weight=76
+    //% blockId=setPlayMode block="Set the music play mode %index"
+    export function setPlayMode(index: PlayMode)
+    {
+        switch (index)
+        {
+            case PlayMode.SINGLE_STOP:
+                serial.writeString("|ONESTOP$");
+                break;
+            case PlayMode.SINGLE_LOOP:
+                serial.writeString("|ONE$");
+                break;
+            case PlayMode.ALL_PLAY:
+                serial.writeString("|ALL$");
+                break;
+        }
+    }
+
 
     let mp3Cmd: string = "";
     /**

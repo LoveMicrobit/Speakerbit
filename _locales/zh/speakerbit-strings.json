@@ -9,5 +9,11 @@
     "speakerbit.ReadName|block":"获取音乐名列表",
     "speakerbit.SetVolume|block":"设置音量%index",
     "speakerbit.VolumeUp|block":"音量+",
-    "speakerbit.VolumeDown|block":"音量-"
+    "speakerbit.VolumeDown|block":"音量-",
+    "speakerbit.PlayInsert|block":"插播音乐编号%index",
+    "speakerbit.getTotalNum|block":"获取音乐总量",
+    "speakerbit.setPlayMode|block":"设置音乐播放模式:%index",
+    "PlayMode.SINGLE_STOP|block":"播放单曲完成便停止",
+    "PlayMode.SINGLE_LOOP|block":"循环播放单曲",
+    "PlayMode.ALL_PLAY|block":"播放全部音乐"
 }
