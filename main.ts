@@ -203,7 +203,7 @@ namespace speakerbit {
             startIndex = findIndexof(mp3Cmd, "|", startIndex);
             let index = findIndexof(mp3Cmd, "$", startIndex);
             if (index != -1) {
-                let cmd: string = mp3Cmd.substr(startIndex+1, index - startIndex);
+                let cmd: string = mp3Cmd.substr(startIndex+1, index - startIndex -1);
                 if (cmd.charAt(0).compare("T") == 0 && cmd.length == 5)
                 {
                     let args: string = cmd.substr(1, 4);
