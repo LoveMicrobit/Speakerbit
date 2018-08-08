@@ -198,15 +198,15 @@ namespace speakerbit {
         let startIndex: number = 0;
         if (cnt == 0)
             return;
-        serial.writeNumber("cnt:");
+        serial.writeString("cnt:");
         serial.writeNumber(cnt);
         for (let i = 0; i < cnt;i++)
         {
             startIndex = findIndexof(mp3Cmd, "|", startIndex);
             let index = findIndexof(mp3Cmd, "$", startIndex);
-            serial.writeNumber("startIndex:");
+            serial.writeString("startIndex:");
             serial.writeNumber(startIndex);
-            serial.writeNumber("index:");
+            serial.writeString("index:");
             serial.writeNumber(index);
             if (index != -1) {
                 let cmd: string = mp3Cmd.substr(startIndex+1, index - startIndex -1);
